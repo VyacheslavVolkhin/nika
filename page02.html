@@ -115,21 +115,89 @@
 </head>
 	<body class="body-main">
 		<div class="main">
-			<header class="header">
-				<div class="logo"><a href="http://lk.nika-to.ru/user"><img src="./page01_files/logo.png" alt="Главная"></a></div>
-				<nav class="nav">
-					<ul class="nav_li">
-						<li><a href="http://lk.nika-to.ru/user/profile"><img src="./page01_files/nav_1.svg" alt=""><span>Личная информация</span></a></li>
-						<li><a href="http://lk.nika-to.ru/user/tasks"><img src="./page01_files/nav_2.svg" alt=""><span>Заявки</span></a></li>
-						<li><a href="http://lk.nika-to.ru/user/messages"><img src="./page01_files/nav_3.svg" alt=""><span>Сообщения</span></a></li>
-						<li><a href="http://lk.nika-to.ru/logout" onclick="event.preventDefault(); document.getElementById(&#39;logout-form&#39;).submit();"><img src="./page01_files/nav_4.svg" alt=""><span>Выход</span></a></li>
-						
-						<form id="logout-form" action="http://lk.nika-to.ru/logout" method="POST" style="display: none;">
-							<input type="hidden" name="_token" value="xu6pgBkhzmMU33QgLj4kp4tfGCRT4deRtvgIZc6q">
-						</form>
+			
+			
+			<!--new header-->
+			<header class="main-header">
+				<div class="logo-wrap">
+					<a href="" class="logo-inner">
+				<span class="logo-pic">
+					<img src="./img/logo.svg" alt="">
+				</span>
+						<span class="logo-title">CRM</span>
+					</a>
+				</div>
+				<div class="user-wrap">
+					<a href="" class="user-inner">
+				<span class="user-photo">
+					<img src="./img/avatar.svg" alt="">
+				</span>
+						<span class="user-title">Имя Фамилия</span>
+					</a>
+				</div>
+				<nav class="menu-wrap">
+					<ul class="menu">
+						<li>
+							<a href="" class="btn-menu">
+						<span class="menu-ico">
+							<img src="./img/icons/menu01.svg" alt="">
+						</span>
+								<span class="menu-title">Личная информация</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="btn-menu">
+						<span class="menu-ico">
+							<img src="./img/icons/menu02.svg" alt="">
+						</span>
+								<span class="menu-title">Заявки</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="btn-menu">
+						<span class="menu-ico">
+							<img src="./img/icons/menu03.svg" alt="">
+						</span>
+								<span class="menu-title">Карта</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="btn-menu menu-new active">
+						<span class="menu-ico">
+							<img src="./img/icons/menu04.svg" alt="">
+						</span>
+								<span class="menu-title">Обновления</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="btn-menu">
+						<span class="menu-ico">
+							<img src="./img/icons/menu05.svg" alt="">
+						</span>
+								<span class="menu-title">Сообщения</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="btn-menu">
+						<span class="menu-ico">
+							<img src="./img/icons/menu06.svg" alt="">
+						</span>
+								<span class="menu-title">Выход</span>
+							</a>
+						</li>
 					</ul>
 				</nav>
-				<span class="open_close"></span> </header>
+			</header>
+			<script>
+                $(window).on('load', function () {
+                    $('.js-menu-button').on('click', function() {
+                        $('.body-main').toggleClass('menu-show');
+                        $(this).toggleClass('active');
+                        return false;
+                    })
+                });
+			</script>
+			<!--end new header-->
 			
 			
 			
@@ -138,6 +206,7 @@
 				
 				<div class="section_top">
 					<div class="heading-section-box">
+						<a href="" class="btn-action-ico ico-menu js-menu-button"></a>
 						<div class="links-wrap">
 							<div class="breadcrumbs-box">
 								<ol>
